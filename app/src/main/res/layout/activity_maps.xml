@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_weight="2"
+            tools:context="com.example.josephdarkins.smallchangegooglemaps2.MapsActivity" />
+
+        <LinearLayout
+            android:id="@+id/locationMarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/MapPinText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="180dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="Set your Location"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_corner_map"/>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+                <!--android:src="@drawable/add_marker"-->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/SelectedLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Selected Location"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#5b2525"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/addressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Getting location"
+                android:textSize="16sp"
+                android:padding="5dp"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/DonationButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/make_donation"
+                android:textColor="#FFFFFF"
+                android:onClick="yourLocation"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#000000"
+                android:padding="10dp"/>
+
+       </LinearLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+    <TextView
+        android:id="@+id/AddressTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/reminder"
+        android:gravity="center"
+        android:text="Loading address"
+        android:textColor="@color/red_text"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:lines="2"/>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:layout_width="0dp"
+        android:layout_alignLeft="@+id/AddressTextView"
+        android:layout_alignRight="@+id/AddressTextView"
+        android:layout_below="@id/AddressTextView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        tools:context="com.example.josephdarkins.smallchangegooglemaps2.MapsActivity" />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map"
+        android:layout_alignLeft="@+id/map"
+        android:layout_alignRight="@+id/map"
+        android:text="@string/GetLocation"
+        android:textColor="#FFFFFF"
+        android:onClick="yourLocation"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#000000"
+        android:layout_weight="1"/>
+
+
+
+
+</RelativeLayout> -->

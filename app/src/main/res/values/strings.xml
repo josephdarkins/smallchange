@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SmallChangeGoogleMaps2</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="reminder">Map</string>
+    <string name="make_donation">Make donation</string>
+    <string name="CONNECTION_FAILURE_RESOLUTION_REQUEST">There has been a connection failure</string>
+
+    <string name="title_activity_splash_screen">splash_screen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
